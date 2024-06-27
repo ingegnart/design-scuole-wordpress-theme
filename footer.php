@@ -15,7 +15,7 @@
             <div class="col logos-wrapper">
                 <img class="ue-logo"
                     src="<?php echo esc_url( get_template_directory_uri() . '/assets/img/logo-eu-inverted.svg' ); ?>"
-                    alt="Finanziato dall' Unione Europea - Next generation EU"
+                    alt="Finanziato dall' Unione Europea - Next generation EU" width="250" height="80"
                 >
                 <div class="logo-footer">
                     <?php get_template_part("template-parts/common/logo", null, array( 'ignora_stemma_scuola' => true )); ?>
