@@ -25,7 +25,7 @@ if (is_array($scuole_didattica) && count($scuole_didattica) > 0) {
 
                         </div><!-- /title-section -->
                         <div class="tabs-img">
-                            <img class="img-fluid" src="<?php echo  get_template_directory_uri(); ?>/assets/img/didattica-mockup.png" alt="">
+                            <img class="img-fluid" src="<?php echo  get_template_directory_uri(); ?>/assets/img/didattica-mockup.webp" alt="" loading="lazy">
                         </div>
                         <div class="responsive-tabs responsive-tabs-aside padding-bottom-200">
                             <ul>
