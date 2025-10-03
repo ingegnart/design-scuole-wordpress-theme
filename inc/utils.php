@@ -169,7 +169,7 @@ function dsi_custom_avatar( $avatar, $id_or_email, $size, $default, $alt ) {
 
         if(isset($foto_id) && $foto_id) {
             $avatar = wp_get_attachment_image_url($foto_id, "item-thumb");
-            $avatar = "<img alt='{$alt}' src='{$avatar}' class='avatar avatar-{$size} photo' height='{$size}' width='{$size}' />";
+            $avatar = ""; // FIX_INGEGNART "<img alt='{$alt}' src='{$avatar}' class='avatar avatar-{$size} photo' height='{$size}' width='{$size}' />";
         }
     }
 
@@ -1124,6 +1124,7 @@ if(!function_exists("dsi_get_img_from_id_url")) {
             $url_parts = parse_url($url);
             if (str_contains($url_parts['host'], "gravatar.com")) {
                 $image_alt = "Avatar utente";
+                echo ''; return; // FIX_INGEGNART
             }
         }
         $img = '<img src="'.$url.'" ';
