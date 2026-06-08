@@ -612,7 +612,7 @@ class Breadcrumb_Trail {
 			$circolare_tags = get_the_terms(get_the_ID(), 'tipologia-circolare');
 		
 			// Inserisci solo la prima tipologia per evitare di fare vedere più di una tipologia nel breadcrumb, nel caso la circolare ne abbia più di una
-			if ($circolare_tags) {$this->items[] =  '<a href="'.get_tag_link($circolare_tags[0]->term_id).'">'. $circolare_tags[0]->name .'</a>';}
+			// FIX_INGEGNART if ($circolare_tags) {$this->items[] =  '<a href="'.get_tag_link($circolare_tags[0]->term_id).'">'. $circolare_tags[0]->name .'</a>';}
 
 			$this->items[] = $post_title;
 		}

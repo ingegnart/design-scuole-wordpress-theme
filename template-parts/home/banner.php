@@ -17,6 +17,7 @@ if($visualizza_banner == "si") {
                         <div class="splide__track ps-lg-3 pe-lg-3">
                             <ul class="splide__list it-carousel-all">
                                 <?php
+                                $is_first_banner = true;
                                 foreach ($banner_group as $banner){
                                     $image_url = wp_get_attachment_image_url($banner["banner_id"], ($forza_dimensione_banner == "si" ? 'banner-cropped' : 'banner') );
                                     $image_alt = get_post_meta( $banner["banner_id"], '_wp_attachment_image_alt', true);
@@ -28,7 +29,7 @@ if($visualizza_banner == "si") {
                                                     <img 
                                                     src="<?php echo $image_url; ?>" 
                                                     style="max-width: 100%;" 
-                                                    alt="<?php echo $image_alt; ?>" />
+                                                    alt="<?php echo $image_alt; ?>" width="300" height="168" <?php if($is_first_banner) { $is_first_banner = false; } else { ?> loading="lazy" <?php } ?> />
                                                     <?php if(isset($banner["caption"]) && $banner["caption"] != "") echo '<figcaption class="h5 mt-2">'.$banner["caption"].'</figcaption>'; ?>
                                                 </figure>
                                             <?php if(isset($banner["url"]) && $banner["url"] != "") echo '</a>'; ?>
